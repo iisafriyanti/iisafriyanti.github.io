@@ -8,10 +8,9 @@ $(document).ready(function(){
     $.ajax({url: "data.json",
       datatype: 'json', 
       success: function(result){
-	      var result;
+	      var result = "<table>";
 		for(i=0; i < result.courses.length; i++) {
-			result += "<tr><th>" + (i+1) + "</th>" +
-	    		"<td>" + result.courses[i].code +"</td>" +
+			result += "<tr><td>" + result.courses[i].code +"</td><tr>"
 		}
 	   	$("div").append(result);
 	  }
