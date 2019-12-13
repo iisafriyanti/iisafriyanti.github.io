@@ -1,0 +1,11 @@
+{ "count":3,
+	"courses":[ {"code" : "CSE143",
+		"seats" : 100,
+		"name" : "Computer Programming"
+	},
+	{"code" : "ANTH300",
+		"seats" : 1,
+		"name" : "Anthropology"
+	}
+	]
+}
