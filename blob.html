@@ -8,11 +8,11 @@ $(document).ready(function(){
     $.ajax({url: "data.json",
       datatype: 'json', 
       success: function(result){
-	      var result = "<table>";
+	      var courseList = "<table>";
 		for(i=0; i < result.count; i++) {
-			result += "<tr><td>" + result.courses[i].code +"</td><tr>"
+			courseList += "<tr><td>" + result.courses[i].code +"</td><tr>"
 		}
-	   	$("div").append(result);
+	   	$("div").append(courseList);
 	  }
 	});
   });
