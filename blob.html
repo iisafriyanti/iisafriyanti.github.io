@@ -8,6 +8,10 @@ $(document).ready(function(){
     $.ajax({url: "data.json",
       datatype: "json", 
       success: function(result){
+        for(i=0; i < result.data.length; i++) {
+
+        $("div").append("<div>"+result"</div>");
+
       $("div").html(result);
     }});
   });
