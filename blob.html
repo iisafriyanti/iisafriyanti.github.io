@@ -8,9 +8,8 @@ $(document).ready(function(){
     $.ajax({url: "data.json",
       datatype: "json", 
       success: function(result){
-        for(i=0; i < result.data.length; i++) {
-
-        $("div").append("<div>"+result"</div>");
+        for(i=0; i < result.courses.length; i++) {
+        $("div").append("<div>"+result.courses[i].code+"</div>");
     }});
   });
 });
