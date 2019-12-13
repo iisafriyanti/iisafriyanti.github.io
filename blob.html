@@ -7,10 +7,13 @@ $(document).ready(function(){
   $("button").click(function(){
     $.ajax({url: "data.json",
       datatype: 'json', 
+      var result;
       success: function(result){
 		for(i=0; i < result.courses.length; i++) {
-			$("div").append("<div>"+result.courses[i].code+"</div>");
+			result += "<tr><th>" + (i+1) + "</th>" +
+	    		"<td>" + result.courses[i].code +"</td>" +
 		}
+	   	$("div").append(result);
 	  }
 	});
   });
