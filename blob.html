@@ -5,12 +5,14 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $.ajax({url: "data.json",
-      datatype: "json", 
+    $.ajax({url: "data.txt",
+      datatype: 'json', 
       success: function(result){
-        for(i=0; i < result.courses.length; i++) {
-        $("div").append("<div>"+result.courses[i].code+"</div>");
-    }});
+		for(i=0; i < result.courses.length; i++) {
+			$("div").append("<div>"+result.courses[i].code+"</div>");
+		}
+	  }
+	});
   });
 });
 </script>
