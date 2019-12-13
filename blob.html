@@ -9,7 +9,7 @@ $(document).ready(function(){
       datatype: 'json', 
       success: function(result){
 	      var result = "<table>";
-		for(i=0; i < result.courses.length; i++) {
+		for(i=0; i < result.count; i++) {
 			result += "<tr><td>" + result.courses[i].code +"</td><tr>"
 		}
 	   	$("div").append(result);
