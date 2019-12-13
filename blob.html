@@ -10,7 +10,7 @@ $(document).ready(function(){
       success: function(result){
 	      var courseList = "<table>";
 		for(i=0; i < result.count; i++) {
-			courseList += "<tr><td>" + result.courses[i].code +"</td><tr>"
+			courseList += "<tr><td>" + result.courses[i].code +"</td><tr>";
 		}
 	   	$("div").append(courseList);
 	  }
