@@ -5,25 +5,20 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $.ajax({url: "data.json",
-      datatype: 'json', 
+    $.ajax({
+      url: "https://www.googleapis.com/books/v1/volumes?q=Donat",
       success: function(result){
-	      var courseList;
-		for(i=0; i < result.count; i++) {
-			courseList += result.courses[i].code;
-		}
-	   	$("div").append(courseList);
-	  }
-	});
+      	$("div").append("Hello");
+      },
   });
 });
 </script>
 </head>
 <body>
 
-<div><h2>Let jQuery AJAX Change This Text</h2></div>
+<div><h2>Change Text!</h2></div>
 
-<button class="button1">Get External Content</button>
+<button>Mystery Button!</button>
 
 </body>
 </html>
